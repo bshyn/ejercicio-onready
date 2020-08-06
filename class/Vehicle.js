@@ -8,6 +8,10 @@ class Vehicle{
         this.price = price;
     }
     
+    isDeluxe(){
+        return false;
+    }
+
     toString(){
         return `Marca: ${this.brand} // Modelo: ${this.model} // Precio: $${this.getFormattedPrice()}`;
     }

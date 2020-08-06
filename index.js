@@ -2,16 +2,19 @@
 
 const Bike = require('./class/Bike');
 const Car = require('./class/Car');
+const ElectricCar = require('./class/ElectricCar');
 
 function main(){
     const vehicleArr = [
         new Car('Peugeot', '206', 200000, 4),
-        new Bike('Honda', 'Titan', 60000, 125),
+        new Bike('Honda', 'Titan', 60000, 325),
         new Car('Peugeot', '208', 250000, 5),
-        new Bike('Yamaha', 'YBR', 80500.5, 160)
+        new Bike('Yamaha', 'YBR', 80500.5, 160),
+        new ElectricCar('Marca', 'Modelo', 999999, 4, 100)
     ];
     
-    printExercise(vehicleArr);
+    printDeluxeVehicles(vehicleArr);
+    //printExercise(vehicleArr);
 }
 
 function printExercise(vehicleArr){
@@ -51,6 +54,15 @@ function findVehicleByLetter(vehicleArr, letter, attribute){
 
 function sortVehiclesByPrice(a, b){
     return a.price - b.price;
+}
+
+function printDeluxeVehicles(vehicleArr){
+    // Mas 200cc o electrico
+    vehicleArr.forEach((vehicle)=> {
+        if(vehicle.isDeluxe()){
+            console.log(vehicle.toString());
+        }
+    });
 }
 
 main();

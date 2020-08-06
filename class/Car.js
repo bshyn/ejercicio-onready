@@ -12,6 +12,7 @@ class Car extends Vehicle{
     toString(){
         return `Marca: ${this.brand} // Modelo: ${this.model} // Puertas: ${this.doors} // Precio: $${this.getFormattedPrice()}`;
     }
+
 } 
 
 module.exports = Car;

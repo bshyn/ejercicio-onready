@@ -12,6 +12,10 @@ class Bike extends Vehicle{
     toString(){
         return `Marca: ${this.brand} // Modelo: ${this.model} // Cilindrada: ${this.displacement}c // Precio: $${this.getFormattedPrice()}`;
     }
+
+    isDeluxe(){
+        return this.displacement > 200;
+    }
 }
 
 module.exports = Bike;
